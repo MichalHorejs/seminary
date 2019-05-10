@@ -1,0 +1,2 @@
+# seminary
+Seminární práce
