@@ -21,13 +21,15 @@
 
                 <fieldset>
 
+                    <input type="hidden" name="id" value="1"/>
+                    
                     <legend><span class="number">1</span> Základní informace</legend>
 
                     <label for="name">Jméno</label>
-                    <input type="text" id="name" name="user_name">
+                    <input type="text" id="name" name="user_name" required>
 
                     <label for="secondname">Příjmení</label>
-                    <input type="text" id="secondname" name="user_secondname">
+                    <input type="text" id="secondname" name="user_secondname" required>
 
                     <label for="isic">Tel. číslo  (S předvolbou bez znaménkaa bez mezer)</label>
                     <input type="number" id="tel" name="user_tel">
@@ -42,7 +44,7 @@
 
                     <label for="mail">Email</label>
                     <p class="itext"><i>Rádi ti odpovíme na email či telefonicky:</i></p>
-                    <input type="email" id="mail" name="user_email">
+                    <input type="email" id="mail" name="user_email" required>
 
                     <label for="webovestranky">Webové stránky</label>
                     <p class="itext"><i>Máš své osobní stránky nebo blog? Vlož sem jejich adresu:</i></p>
@@ -67,7 +69,7 @@
 
                     <legend><span class="number">2</span>Tvůj názor/dotaz</legend>
                     <label for="opinion">Vyjádři se:</label>
-                    <textarea id="opinion" name="user_opinion"></textarea>
+                    <textarea id="opinion" name="user_opinion" required></textarea>
                     
                     <label for="classes">Kontakt:</label>
                     <select id="classes" name="user_classes">
@@ -123,11 +125,11 @@
                     -->
 
                     <label>Výběr:</label>
-                    <input type="radio" id="stiznost" value="options_stiznost" name="user_options"><label class="light" for="stiznost">Stížnost</label><br>
-                    <input type="radio" id="navrh" value="options_navrh" name="user_options"><label class="light" for="navrh">Návrh</label><br>
-                    <input type="radio" id="dotaz" value="options_dotaz" name="user_options"><label class="light" for="dotaz">Dotaz</label><br>
-                    <input type="radio" id="kritika" value="options_kritika" name="user_options"><label class="light" for="kritika">Kritika</label><br>
-                    <input type="radio" id="niczeseznamu" value="options_niczeseznamu" name="user_options"><label class="light" for="niczeseznamu">Nic ze seznamu</label><br>
+                    <input type="radio" id="stiznost" value="Stížnost" name="user_options"><label class="light" for="stiznost">Stížnost</label><br>
+                    <input type="radio" id="navrh" value="Návrh" name="user_options"><label class="light" for="navrh">Návrh</label><br>
+                    <input type="radio" id="dotaz" value="Dotaz" name="user_options"><label class="light" for="dotaz">Dotaz</label><br>
+                    <input type="radio" id="kritika" value="Kritika" name="user_options"><label class="light" for="kritika">Kritika</label><br>
+                    <input type="radio" id="niczeseznamu" value="Jiné" name="user_options"><label class="light" for="niczeseznamu">Nic ze seznamu</label><br>
 
                 </fieldset>
 
