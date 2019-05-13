@@ -32,7 +32,6 @@ h5 {
   font-weight: normal;
   line-height: 1.1;
   color: rgba(240, 232, 232, 0.698);
-  
 }
 
 h4 {  
@@ -64,7 +63,6 @@ h3 {
   line-height: 1.2;*/
   /*
   margin-bottom: 1.7em;*/ /* 34px */
-  
 }
 
 img {
@@ -73,18 +71,14 @@ img {
   border-radius: 10px;
 }
 
-
-
-
 button{
 
  /* border-bottom: 5px solid;*/
   padding: 0 9px 3px;
   margin-top: 20px;
   display: inline-block;
-
-
 }
+
 .buttontoweb {
 
   /* border-bottom: 5px solid;*/
@@ -102,15 +96,9 @@ button{
    border-width: 1px 1px 3px;
    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
    margin-bottom: 10px;
-   
  } 
- 
 
-
-
-
-.itext{
-
+.itext{ 
 color: #ffbb6d;
 }
 
@@ -121,7 +109,6 @@ color: #ffbb6d;
   margin-left: 200%;
   display: inline-block;
 }
-
 
 ul,
 ol {
@@ -169,26 +156,19 @@ a:active {
 }
 
 #section-b a:visited{
- 
-    color: rgba(243, 243, 243, 0.863);
-
+  color: rgba(243, 243, 243, 0.863);
 }
 
 #section-b a:hover{
- 
   color: rgba(255, 227, 196, 0.651);
-
 }
 
 #section-b a:link{
- 
   color: rgb(135, 202, 202);
   text-decoration: none;
-
 }
 
 #showcase a:visited{
-  
   color: rgba(243, 243, 243, 0.514);
 }
 
@@ -308,10 +288,7 @@ a:active {
 
 .backend {
   float: right;
-  
 }
-
-
 
 /* Float Clearfix ------------------ */
 

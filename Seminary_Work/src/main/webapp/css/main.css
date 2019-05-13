@@ -74,6 +74,13 @@ button {
   margin-bottom: 10px;
 }
 
+img{
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding-left: 29.7rem; 
+}
+
 fieldset {
   margin-bottom: 30px;
   border: none;
@@ -117,6 +124,18 @@ label.light {
 .main-container{
   width: 60%;
   margin: auto;
+}
+
+@media (max-width: 768px) {
+
+
+  img{
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding-left: 0.8rem; 
+  }
+
 }
 
 @media screen and (min-width: 480px) {
