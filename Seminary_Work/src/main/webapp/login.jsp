@@ -1,4 +1,5 @@
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+  
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,25 +16,12 @@
     <body oncontextmenu="return false">
        <!-- <header id="top" class="main-headertwo"> -->
        <!-- </header> -->
-        <form class="box" action="https://www.spseol.cz/" method="post">
+        <form class="box" action="check" method="post">
           <h1>Login</h1>
           <input type="text" name="userid" placeholder="Username">
           <input type="password" name="pswrd" placeholder="Password">
           <input type="submit" name="" value="Login">
-
-          <script language="javascript">
-            function chech(form)
-            {
-                if(form.userid.value == "SPSEOL" && form.pswrd.value == "2341")
-                {
-                    window.open('https://www.spseol.cz/')
-                }
-                else
-                {
-                    alert("Jméno nebo heslo které jste zadali není správné zkuste to znovu")
-                }
-            }
-          </script>
+          <font color="red">${requestScope.wrongMessage}</font>
         </form>
     </body>
 </html>
