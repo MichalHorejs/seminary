@@ -7,7 +7,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <table border="1">
+        <table border="1"> <!-- style="border:1px solid black;" -->
             <thead>
                 <tr>
                     <th>Jméno</th>
@@ -21,8 +21,8 @@
                 </tr>
             </thead>
             <tbody>
-                <c:forEach var="column" items="${results}">
-                    <tr>
+                <c:forEach var="column" items="${results}" varStatus="loop">
+                    <tr class="${loop.index % 2 == 0 ? 'even' : 'odd'}">
                         <td>${column.name}</td>
                         <td>${column.lastname}</td>
                         <td>${column.number}</td>
