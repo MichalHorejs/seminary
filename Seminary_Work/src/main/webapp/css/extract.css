@@ -1,0 +1,10 @@
+tr.even { 
+    background: greenyellow; 
+}
+tr.odd { 
+    background: green; 
+}
+
+thead tr { 
+    background: blue; 
+}
