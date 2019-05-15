@@ -20,6 +20,8 @@ public class check extends HttpServlet {
         
         
         if(name.equals("admin") && password.equals("password")){
+            HttpSession session = request.getSession();
+            session.setAttribute("username", name);
             response.sendRedirect("read");
         }else{
             RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
