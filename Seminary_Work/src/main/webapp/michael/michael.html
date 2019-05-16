@@ -1,60 +1,77 @@
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Tables</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/extract.css">
-        <title>JSP Page</title>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="main.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <table border="1" align="center"> <!-- style="border:1px solid black;" -->
-            <thead>
-                <tr>
-                    <th>Jméno</th>
-                    <th>Příjmení</th>
-                    <th>Tel. číslo</th>
-                    <th>E-mail</th>
-                    <th>Web</th>
-                    <th>Zpráva</th>
-                    <th>Kontakt</th>
-                    <th colspan="2">Typ</th>
-                </tr>
-            </thead>
-            <tbody>
-                <form action="delete" method="get">
-                    <tr class="even">
-                        <td>ě+ščžčřžýíúů</td>
-                        <td>ě+ščžčřžýíúů</td>
-                        <td>ě+ščžčřžýíúů</td>
-                        <td>ě+ščžčřžýíúů</td>
-                        <td>ě+ščžčřžýíúů</td>
-                        <td>ě+ščžčřžýíúů</td>
-                        <td>ě+ščžčřžýíúů</td>
-                        <td>ě+ščžčřžýíúů</td>
-                        <td class="cross">
-                            <input type="hidden" name="idquestions" value="58" />    
-                            <input type="image" src="img/cross.png" width="25" height="25"/>
-                        </td>
+        <div class="mainboxelement"></div>
+            <table> 
+                <caption>Our Database</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Jméno</th>
+                        <th scope="col">Příjmení</th>
+                        <th scope="col">Tel.</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Web</th>
+                        <th scope="col">Zpráva</th>
+                        <th scope="col">Kontakt</th>
+                        <th colspan="2">Typ</th>
                     </tr>
-                </form>
-                <form action="delete" method="get">
-                    <tr class="odd">
-                        <td>ě+ščžčřžýíúů</td>
-                        <td>ě+ščžčřžýíúů</td>
-                        <td>ě+ščžčřžýíúů</td>
-                        <td>ě+ščžčřžýíúů</td>
-                        <td>ě+ščžčřžýíúů</td>
-                        <td>ě+ščžčřžýíúů</td>
-                        <td>ě+ščžčřžýíúů</td>
-                        <td>ě+ščžčřžýíúů</td>
-                        <td class="cross">
-                            <input type="hidden" name="idquestions" value="59" />    
-                            <input type="image" src="img/cross.png" width="25" height="25"/>
-                        </td>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Data's are updated every 15 minutes !</td>
                     </tr>
+                </tfoot>
+                <tbody>
+                    <form action="delete" method="get">
+                        <tr>
+                            <th scope="row">Michael</th>
+                            <td>Hajný</td>
+                            <td>737 719 532</td>
+                            <td>CryptextCompany@gmail.com</td>
+                            <td>--//--</td>
+                            <td>Chci toho být součástí</td>
+                            <td>Ano</td>
+                            <td>Návrh</td>
+                            <td class="cross">
+                                <input type="hidden" name="idquestions" value="58" />    
+                                <input type="image" src="img/cros.png" width="25" height="25"/>
+                            </td>
+                        </tr>
+                    </form>
+                    <form action="delete" method="get">
+                        <tr>
+                            <th scope="row">Michal</th>
+                            <td>Horejš</td>
+                            <td>773 699 811</td>
+                            <td>horejs@gmail.com</td>
+                            <td>nemám</td>
+                            <td>Dodělejte button</td>
+                            <td>Ano</td>
+                            <td>Stížnost</td>
+                            <td class="cross">
+                                <input type="hidden" name="idquestions" value="59" />    
+                                <input type="image" src="img/cros.png" width="25" height="25"/>
+                            </td>
+                        </tr>
+                    </form>
+                </tbody>
+            </table>   
+            <div class="footer-container">
+                <form action="logout">
+                    <input type="submit" value="Logout" />
                 </form>
-            </tbody>
-        </table>     
-            <form action="logout">
-                <input type="submit" value="Logout" />
-            </form>
+            </div>
+        </div>
     </body>
 </html>
