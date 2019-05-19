@@ -1,35 +1,27 @@
 package controllers;
 
 import java.io.IOException;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-@WebServlet(name = "check", urlPatterns = {"/check"})
-public class check extends HttpServlet {
 
+@WebServlet(name = "logout", urlPatterns = {"/logout"})
+public class logout extends HttpServlet {
+
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        String name = request.getParameter("userid");
-        String password = request.getParameter("pswrd");
+        HttpSession session = request.getSession();
+        session.removeAttribute("username");
+        session.invalidate();
         
-        
-        if(name.equals("admin") && password.equals("password")){
-            HttpSession session = request.getSession();
-            session.setAttribute("username", name);
-            response.sendRedirect("read");
-        }else{
-            RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-            request.setAttribute("wrongMessage", "Zadali jste špatně jméno nebo heslo !");
-            rd.forward(request, response);
-        }            
-           
-               
+        response.sendRedirect("login.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

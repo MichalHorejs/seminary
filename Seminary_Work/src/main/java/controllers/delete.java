@@ -1,35 +1,44 @@
 package controllers;
 
+import entity.Questions;
 import java.io.IOException;
-import javax.servlet.RequestDispatcher;
+import java.io.PrintWriter;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "check", urlPatterns = {"/check"})
-public class check extends HttpServlet {
+@WebServlet(name = "delete", urlPatterns = {"/delete"})
+public class delete extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        String name = request.getParameter("userid");
-        String password = request.getParameter("pswrd");
+        int idquestions = Integer.parseInt(request.getParameter("idquestions"));
+
+        EntityManagerFactory emf = (EntityManagerFactory) request.getServletContext().getAttribute("emf");
+        EntityManager em = emf.createEntityManager();
         
-        
-        if(name.equals("admin") && password.equals("password")){
-            HttpSession session = request.getSession();
-            session.setAttribute("username", name);
+        try{
+            Questions entity = em.find(Questions.class, idquestions);
+            
+            em.getTransaction().begin();
+            
+            em.remove(entity);
+            
+            em.getTransaction().commit();
+            
             response.sendRedirect("read");
-        }else{
-            RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-            request.setAttribute("wrongMessage", "Zadali jste špatně jméno nebo heslo !");
-            rd.forward(request, response);
-        }            
-           
-               
+        }finally{
+            if (em.getTransaction().isActive())
+                em.getTransaction().rollback();
+            em.close();
+        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
