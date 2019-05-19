@@ -65,11 +65,17 @@
             </tbody>
         </table>
 
+
+        <form action="logout">
+            <input type="submit" value="Logout" />
+        </form>
+
         <div class="footer-container">
             <form action="logout">
                 <input type="submit" value="Logout" />
             </form>
         </div>
+
         
     </body>
 </html>
